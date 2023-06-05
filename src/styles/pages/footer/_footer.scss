@@ -1,0 +1,81 @@
+.footer {
+  // background: #eaeeef;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .container__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    @include tablet {
+      display: inherit !important;
+    }
+    &__important-links-container {
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      @include tablet {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include largeMobile {
+        width: 100%;
+        display: inherit !important;
+      }
+    }
+    &__contact-us {
+      width: 25%;
+      text-align: right;
+      @include tablet {
+        width: 100%;
+        text-align: left;
+      }
+      &__body {
+        &__phone-number {
+          font-family: $fm-open-sans-bold;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: right;
+          color: #212b36;
+          margin-bottom: 30px;
+          @include fourKDevice {
+            font-size: 15px;
+            margin-bottom: 20px;
+          }
+          @include tablet {
+            text-align: left;
+          }
+        }
+        &__date {
+          font-family: $fm-open-sans-bold;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #637381;
+          margin-bottom: 16px;
+          @include fourKDevice {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+        &__social-links {
+          margin-top: 30px;
+          &__icon {
+            font-size: 25px;
+            margin-left: 35px;
+            &:hover {
+              color: #3056d3;
+            }
+            @include tablet {
+              margin-left: 0px;
+              margin-right: 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
