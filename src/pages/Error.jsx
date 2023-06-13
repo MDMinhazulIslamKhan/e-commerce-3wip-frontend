@@ -1,17 +1,16 @@
-import { useRouteError } from "react-router-dom";
+import "../styles/pages/ErrorPage/_errorpage.scss"
+const ErrorPage = () => {
+    return (
+        <div id="notfound">
+		<div className="notfound">
+			<div className="notfound-404">
+				<h1>4<span>0</span>4</h1>
+				<h2>Page Not Found</h2>
+			</div>
+		</div>
+	</div>
 
-const Error = () => {
-  const error = useRouteError();
-  return (
-    <div>
-      <h1>Sorry!</h1>
-      <p>An unexpected error has occurred.</p>
-      <h4>
-        <i>{error.statusText || error.message}</i>
-      </h4>
-      <p>{error.data}</p>
-    </div>
-  );
-};
-
-export default Error;
+    );
+  };
+  
+  export default ErrorPage;
